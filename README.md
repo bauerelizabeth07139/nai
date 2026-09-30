@@ -36,9 +36,9 @@ The config lives at `$DSH_HOME/nai.json` (default `~/.dsh/nai.json`) and is edit
 |---|---|---|
 | `wallpaper` | `true` | Wear the Nai artwork as the GUI background |
 | `brand` | `true` | Replace the sidebar and hero logos with the Nai avatar |
-| `surfaceOpacity` | `88` | Shell surface opacity in % — higher means a more opaque shell, a subtler wallpaper (40–100) |
+| `surfaceOpacity` | `60` | Shell surface opacity in % — lower shows more of the wallpaper, higher keeps the shell opaque (25–100) |
 | `blur` | `0` | Gaussian blur applied to the wallpaper, in px (0–24) |
-| `scrim` | `35` | Dark scrim over the wallpaper for readable transcript, in % (0–90) |
+| `scrim` | `35` | Palette-matched wash over the wallpaper — black in the dark theme, white in the light theme — for a readable transcript, in % (0–90) |
 | `position` | `center` | Wallpaper `background-position`: `center`, `left`, `right`, `top`, `bottom` |
 
 | Route | Method | Purpose |
@@ -46,6 +46,7 @@ The config lives at `$DSH_HOME/nai.json` (default `~/.dsh/nai.json`) and is edit
 | `/api/nai/config` | `GET` / `PUT` | Read / write the config (writes are same-origin only) |
 | `/api/nai/wallpaper` | `GET` | The 16:9 background artwork |
 | `/api/nai/mark` | `GET` | The square avatar artwork |
+| `/api/nai/diag` | `GET` / `POST` | Last browser-side diagnostic report (mount state, surface overrides, errors) |
 
 Every value is clamped server-side; unknown keys are dropped.
 
