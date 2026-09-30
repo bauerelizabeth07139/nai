@@ -1,6 +1,6 @@
 {
   "name": "nai",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Nai milk-frog mascot appearance layer for the DeepSeek Harness web GUI: wears the bundled milk-frog artwork as the GUI background (surface-token fade with opacity, blur, scrim and position controls), seats the matching square avatar as the sidebar and conversation brand mark, and edits it all from a Settings section.",
   "type": "module",
   "license": "MIT",
